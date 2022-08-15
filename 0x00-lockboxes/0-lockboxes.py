@@ -5,12 +5,16 @@ from operator import truediv
 
 
 def canUnlockAll(boxes):
-""" method that determines if all the boxes can be opened"""
-total_boxes = len(boxes)
-
-if total_boxes <= 1:
-    return True
-return False
+    new_list = [0]
+    for i, box in enumerate(boxes):
+        if not box:
+            continue
+        for j in box:
+            if j < len(boxes) and j not in new_list and j != i:
+                new_list.append(j)
+    if len(new_list) == len(boxes):
+        return True
+    return False
 
 
 
