@@ -14,4 +14,6 @@ def minOperations(n):
             if n % divisor == 0:
                 operation += divisor
                 n = n // divisor
+                break
+            
     return operation
