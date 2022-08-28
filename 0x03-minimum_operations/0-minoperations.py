@@ -15,5 +15,5 @@ def minOperations(n):
                 operation += divisor
                 n = n // divisor
                 break
-            
+
     return operation
